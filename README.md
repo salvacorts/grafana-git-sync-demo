@@ -97,16 +97,46 @@ You can edit dashboards in Grafana and submit changes as pull requests in GitHub
 
 Here is how you can edit dashboards using `grafanactl` and see the changes reflected in both GitHub and Grafana:
 
-In your terminal:  
-TODO
-```bash
+1. In your terminal:
+    1. First, explore the available commands:
+        ```bash
+        grafanactl -h
+        ```
+        This will show you all available options and commands for the CLI tool.
 
-grafanactl -h
-grafanactl resources pull
-grafanactl resources get dashboards
-grafanactl resource edit dashboard <ID>
-grafanactl resources push
-```
+    1. Pull the latest resources from Grafana:
+        ```bash
+        grafanactl resources pull
+        ```
+        This command synchronizes your local environment with your Grafana instance, downloading all dashboards and other resources.
+
+    1. List all available dashboards:
+        ```bash
+        grafanactl resources get dashboards
+        ```
+        This will display a list of all dashboards with their IDs, which you'll need for editing.
+
+    1. Edit a specific dashboard:
+        ```bash
+        grafanactl resource edit dashboard <ID>
+        ```
+        Replace `<ID>` with the actual dashboard ID from the previous step. This will open your default editor where you can make changes to the dashboard JSON.
+
+    1. Push your changes back to Grafana and GitHub:
+        ```bash
+        grafanactl resources push
+        ```
+        This command will sync your local changes with both Grafana and your GitHub repository.
+
+1. In GitHub:
+    1. Navigate to your repository
+    1. Check the commit history to see your dashboard changes
+    1. Review the changes in the dashboard JSON file
+
+1. In Grafana:
+    1. Open your dashboards section
+    1. Verify that your changes have been automatically synchronized
+
 
 ---
 
