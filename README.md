@@ -23,7 +23,8 @@ This demo is designed for:
 
 ## Intro
 
-⚠️ **Disclaimer**: Git Sync is currently in experimental phase and may have limitations or breaking changes. While it represents Grafana's first step toward comprehensive Observability as Code, we don't recommend it to use it production or critical environments.
+> [!WARNING]
+> Git Sync is currently in experimental phase and may have limitations or breaking changes. While it represents Grafana's first step toward comprehensive Observability as Code, we don't recommend it to use it production or critical environments.
 
 [Git Sync](https://grafana.com/docs/grafana/latest/observability-as-code/provision-resources/) is Grafana's solution for implementing [Observability as Code (OaC)](https://grafana.com/docs/grafana/latest/observability-as-code/). It enables bi-directional synchronization between your Grafana dashboards and a Git repository, allowing you to:
 
