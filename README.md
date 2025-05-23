@@ -1,66 +1,73 @@
 # grafana-git-sync-demo
 
-Demostration on how to use [Grafana Git Sync](https://grafana.com/docs/grafana/latest/observability-as-code/provision-resources/git-sync-setup/) and [grafanactl](https://github.com/grafana/grafanactl).
+Hey there! This is a fun demo showing how to use [Grafana Git Sync](https://grafana.com/docs/grafana/latest/observability-as-code/provision-resources/git-sync-setup/) and [grafanactl](https://github.com/grafana/grafanactl).
 
 ## Requirements
 
-- Have terminal :).
-- Have image rendering running and configured. See [Image Rendering documentation](https://grafana.com/docs/grafana/latest/setup-grafana/image-rendering/).
-- Grafana nightly build running and configured to enable Git Sync as described [Git Sync documentation](https://grafana.com/docs/grafana/latest/observability-as-code/provision-resources/git-sync-setup/). Make sure you set up webhooks and image rendering so that pull request comments and instaneous pulling work properly.
-- Have a repository to push / pull changes to.
-- Have a PAT token with correct permissions for that repository including webhook events and pull requests. See [Create a Github Access Token](https://grafana.com/docs/grafana/latest/observability-as-code/provision-resources/git-sync-setup/#create-a-github-access-token)
-- Have some dashboards and folders already created in the system.
-- Install [grafanactl](https://grafana.github.io/grafanactl/installation/)
+- A terminal (you've got this!).
+- Image rendering up and running. Check out the [Image Rendering documentation](https://grafana.com/docs/grafana/latest/setup-grafana/image-rendering/).
+- Grafana nightly build with Git Sync enabled. Follow the [Git Sync documentation](https://grafana.com/docs/grafana/latest/observability-as-code/provision-resources/git-sync-setup/) and make sure webhooks and image rendering are set up so pull request comments and instant sync work smoothly.
+- A repository to push and pull changes.
+- A PAT (Personal Access Token) with the right permissions for your repository, including webhook events and pull requests. See [Create a Github Access Token](https://grafana.com/docs/grafana/latest/observability-as-code/provision-resources/git-sync-setup/#create-a-github-access-token).
+- Some dashboards and folders already created in your Grafana instance.
+- [grafanactl](https://grafana.github.io/grafanactl/installation/) installed.
 
-## Basic workflow
+## Basic Workflow
 
-### 1) Migrate Dashboards to Github
+### 1) Migrate Dashboards to GitHub
 
-Here it's how you can migrate your existing dashboards to GitHub and enable bi-directional synchronization between Grafana and Github:
+Here's how to migrate your existing dashboards to GitHub and enable bi-directional sync between Grafana and GitHub:
 
 1. In Grafana:
-    1. Go to `Dashboards` and show the existing dashboards and folders. 
-1. In Github:
-    1. Go to the repository in `github.com` to display the contents.
-1. In Grafana, go to `TODO/provisioning` to configure your first repository:
-    1. Paste your PAT token and input your repository details. Click Next.
-    1. Grafana will now tell you how many dashboards are in your instance and if you want to migrate them to Github. 
-    1. Select that option and initiate the migration.
-    1. Wait till migration completed successfully and it will tell how many dashboards were migrated.
-    1. Enable the option `TODO` to enable dashboards previews screenshots on pull requests.
-    1. Clik in `Finish`.
-1. In Github:
-    1. Refresh your repository content to see a new folder `/grafana` containing the dashboards.
-    1. Open one dashboards to show briefly the content.
+    1. Go to `Dashboards` and check out your existing dashboards and folders.
+1. In GitHub:
+    1. Open your repository on `github.com` to see what's inside.
+1. In Grafana, go to `TODO/provisioning` to set up your first repository:
+    1. Paste your PAT token and enter your repository details. Click "Next."
+    1. Grafana will show you how many dashboards are in your instance and ask if you want to migrate them to GitHub.
+    1. Select the migration option and start the process.
+    1. Wait for the migration to complete. Grafana will tell you how many dashboards were migrated.
+    1. Enable the `TODO` option to allow dashboard preview screenshots on pull requests.
+    1. Click "Finish."
+1. In GitHub:
+    1. Refresh your repository to see a new `/grafana` folder with your dashboards.
+    1. Open a dashboard file to quickly review its contents.
 1. In Grafana:
-    1. Open the Github connection by clicking in `TODO`.
-    1. Show the repository status page (e.g. how many dashboards, recent jobs, resources tab and files tab).
+    1. Open the GitHub connection by clicking `TODO`.
+    1. Check out the repository status page (e.g., dashboard count, recent jobs, resources tab, and files tab).
 
-That's how you migrate to Git Sync and create a Github connection with Grafana! Git Sync will keep grafana always in sync with Github.
+That's it! Your Grafana instance is now connected to GitHub with Git Sync, keeping everything in sync.
 
-### 2) Use Pull Requests for your dashboards
+### 2) Use Pull Requests for Your Dashboards
 
-Here it's how you can edit dashboards in Grafana and submit them as Pull Requests in Github before they are deployed: 
+You can edit dashboards in Grafana and submit changes as pull requests in GitHub before they go live:
+
 1. In Grafana:
-    1. Go to `Dashboards` and open a dashboard to see that they have now the provisioned purple badge `<->`.
-    1. Open one of the dashboards
-    1. Edit it to change something. 
-    1. Click on save and see that now we have new special drawer for this provisioned dashboards.
-    1. Write a commit message. 
-    1. Click on "TODO" to create a branch for the changes.
-    1. The UI will redirect you to dashboards page and show a banner telling you that this is a preview and it doesn't exist yet in Grafana. That banner will offer you a button `Open Pull Request`.
-    1. Click in `Open Pull Request`.
-    1. You will be redirected to your repository in `github.com` to open the pull request.
-1. In Github:
+    1. Go to `Dashboards` and open a dashboard. Provisioned dashboards will have a purple `<->` badge.
+    1. Open a dashboard.
+    1. Make and save your changes. A new drawer will pop up for provisioned dashboards.
+    1. Write a commit message.
+    1. Click "TODO" to create a branch for your changes.
+    1. The UI will redirect you to the dashboards page and show a banner indicating this is a preview and not yet live in Grafana. The banner will offer an `Open Pull Request` button.
+    1. Click `Open Pull Request`.
+    1. You'll be redirected to your repository on `github.com` to open the pull request.
+1. In GitHub:
     1. Open the pull request.
-    1. Wait some seconds until our Grafana integration makes a comment on the pull request with previews of the before and after of your changes in this dashboard. 
+    1. Wait a few seconds for the Grafana integration to comment on the pull request with before-and-after previews of your dashboard changes.
     1. Merge the pull request.
-1. In Grafana, 
-    1. Go to your dashboard (or refresh) to see the changes applied automatically. 
+1. In Grafana:
+    1. Go to your dashboard (or refresh) to see the changes applied automatically.
 
-### 3) Edit a dashboard using `grafanactl`
+### 3) Edit a Dashboard Using `grafanactl`
 
-Here it's how you can edit dashboards using `grafanactl` and see the changes reflected in both Github and Grafana:
-In your terminal: 
-... 
+You can also edit dashboards using `grafanactl` and see the changes reflected in both GitHub and Grafana:
+
+In your terminal:  
+TODO
+
+---
+
+🎉 Congratulations! You've successfully set up Git Sync for your Grafana dashboards! 🎉
+
+Thank you for following along with this guide. You're now part of an elite group of developers who keep their dashboards version-controlled and collaborative. Happy dashboarding! 🚀
 
