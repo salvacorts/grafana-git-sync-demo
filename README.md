@@ -69,11 +69,14 @@ That's it! Your Grafana instance is now connected to GitHub with Git Sync, keepi
 You can edit dashboards in Grafana and submit changes as pull requests in GitHub before they go live:
 
 1. In Grafana:
-    1. Go to `Dashboards` and open a dashboard. Provisioned dashboards will have a purple `<->` badge.
+    1. Go to `Dashboards`. 
     1. Open a dashboard.
-    1. Make and save your changes. A new drawer will pop up for provisioned dashboards with new saving options.
+    1. You will see a purple `<->` badge indicating it's now managed by Git Sync.
+    1. Make some changes and click on `Save`.
+    1. A new drawer will pop up for provisioned dashboards with new saving options.
     1. Write a commit message.
-    1. Click "TODO" to create a branch for your changes.
+    1. Select `Push to new branch` to create a branch for your changes.
+    1. Click `Save`.
     1. You will be redirected to the dashboards page and see a banner indicating this is a preview and not yet live in Grafana. 
     1. The banner will offer an `Open Pull Request` button, click on it.
     1. A new tab will be opened for you to open a pull request in Github.
@@ -81,6 +84,11 @@ You can edit dashboards in Grafana and submit changes as pull requests in GitHub
     1. Open the pull request.
     1. Wait a few seconds for the Grafana integration to comment on the pull request with before-and-after previews of your dashboard changes.
     1. Enjoy the view of the side-to-side comparison.
+    1. Click on the preview link to see the new dashboard preview render in Grafana.
+    1. See also that you have a link to go back to your original PR.
+    1. Edit the dashboard again and save it to the pull request branch which would be selected automatically for you.
+    1. Close the tab.
+    1. See the new comment with the new side-by-side comparison.
     1. Merge the pull request.
 1. In Grafana:
     1. Go to your dashboard (or refresh) to see the changes were applied automatically.
@@ -128,35 +136,43 @@ Here is how you can edit dashboards using `grafanactl` and see the changes refle
     1. Pull the latest resources from Grafana:
         ```bash
         grafanactl resources pull
+        ✔ 6 resources pulled
         ```
         This command synchronizes your local environment with your Grafana instance, downloading all dashboards and other resources.
 
-    1. List all available dashboards:
+    1. List all available dashboards and folders:
         ```bash
-        grafanactl resources get dashboards
+        $ grafanactl resources get folders
+        KIND     NAME                                       NAMESPACE
+        Folder   demodeeperfolder-xkamwnofnmtnog45gzwhbw9   default
+        Folder   demofolder-gmw2mvkigdeajzkygpy7wvlnwbyy0   default
+
+        $ grafanactl resources get dashboards
+        KIND        NAME      NAMESPACE
+        Dashboard   adg5vbj   default
+        Dashboard   admfz74   default
+        Dashboard   adn5mxb   default
+
         ```
         This will display a list of all dashboards with their IDs, which you'll need for editing.
 
-    1. Edit a specific dashboard:
+    1. Find out the dashboard ID by looking at the file or browser URL.
+    1. Edit a specific dashboard by peeking at the id:
         ```bash
         grafanactl resource edit dashboard <ID>
+        # You will be able to edit the dashboard using your default terminal editor
         ```
+
         Replace `<ID>` with the actual dashboard ID from the previous step. This will open your default editor where you can make changes to the dashboard JSON.
 
-    1. Push your changes back to Grafana and GitHub:
-        ```bash
-        grafanactl resources push
-        ```
-        This command will sync your local changes with both Grafana and your GitHub repository.
-
 1. In GitHub:
-    1. Navigate to your repository
-    1. Check the commit history to see your dashboard changes
-    1. Review the changes in the dashboard JSON file
+    1. Navigate to your repository.
+    1. Check the commit history to see your dashboard changes.
+    1. Review the changes in the dashboard JSON file.
 
 1. In Grafana:
-    1. Open your dashboards section
-    1. Verify that your changes have been automatically synchronized
+    1. Open your dashboards section.
+    1. Verify that your changes have been automatically synchronized.
 
 
 ---
