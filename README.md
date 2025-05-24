@@ -110,7 +110,7 @@ Here is how you can edit dashboards using `grafanactl` and see the changes refle
 
 - In your terminal:
   - First, explore the available commands:
-    ```bash
+    ```console
     grafanactl -h
     Usage:
     grafanactl [command]
@@ -132,14 +132,14 @@ Here is how you can edit dashboards using `grafanactl` and see the changes refle
     This will show you all available options and commands for the CLI tool.
 
   - Pull the latest resources from Grafana:
-    ```bash
+    ```console
     grafanactl resources pull
     ✔ 6 resources pulled
     ```
     This command synchronizes your local environment with your Grafana instance, downloading all dashboards and other resources.
 
   - List all available dashboards and folders:
-    ```bash
+    ```console
     $ grafanactl resources get folders
     KIND     NAME                                       NAMESPACE
     Folder   demodeeperfolder-xkamwnofnmtnog45gzwhbw9   default
@@ -155,7 +155,7 @@ Here is how you can edit dashboards using `grafanactl` and see the changes refle
 
   - Find out the dashboard ID by looking at the file or browser URL.
   - Edit a specific dashboard by peeking at the id:
-    ```bash
+    ```console
     grafanactl resource edit dashboard <ID>
     # You will be able to edit the dashboard using your default terminal editor
     ```
