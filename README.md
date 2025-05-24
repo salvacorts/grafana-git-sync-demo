@@ -9,6 +9,7 @@ Hey there! This is a fun demo showing how to use [Grafana Git Sync](https://graf
 > Git Sync is currently in an experimental phase and may have limitations or breaking changes. While it represents Grafana's first step toward comprehensive Observability as Code, we don't recommend using it in production or critical environments.
 
 
+
 ## Target Audience
 
 This demo is designed for:
@@ -17,6 +18,14 @@ This demo is designed for:
 - **Grafana Users** interested in automating dashboard management.
 - **Teams** seeking to improve collaboration on dashboard development.
 - **Anyone** curious about Grafana's Git Sync feature and its capabilities.
+
+## Video Recordings
+
+For a visual (but muted :P) walkthrough, you can watch the following recordings:
+- [Step 1: Establishing GitHub Connection](./assets/videos/git-sync-demo-step-1-connect.mp4).
+- [Step 2: Use Pull Request to Edit your Dashboards](./assets/videos/git-sync-demo-step-2-pull-request.mp4).
+- [Step 3: Edit Dashboard from Github](./assets/videos/git-sync-demo-step-3-github-com.mp4).
+- [Step 4: Edit Dashboard with grafanactl](./assets/videos/git-sync-demo-step-4-grafanactl.mp4).
 
 ## Requirements
 
