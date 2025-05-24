@@ -78,6 +78,8 @@ That's it! Your Grafana instance is now connected to GitHub with Git Sync, keepi
 
 ## Step 2: Use Pull Requests for Your Dashboards
 
+![](./assets/gifs/git-sync-demo-step-2-pull-request.gif)
+
 You can edit dashboards in Grafana and submit changes as pull requests in GitHub before they go live:
 
 - In Grafana:
