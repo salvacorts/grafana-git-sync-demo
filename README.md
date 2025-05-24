@@ -71,18 +71,19 @@ You can edit dashboards in Grafana and submit changes as pull requests in GitHub
 1. In Grafana:
     1. Go to `Dashboards` and open a dashboard. Provisioned dashboards will have a purple `<->` badge.
     1. Open a dashboard.
-    1. Make and save your changes. A new drawer will pop up for provisioned dashboards.
+    1. Make and save your changes. A new drawer will pop up for provisioned dashboards with new saving options.
     1. Write a commit message.
     1. Click "TODO" to create a branch for your changes.
-    1. The UI will redirect you to the dashboards page and show a banner indicating this is a preview and not yet live in Grafana. The banner will offer an `Open Pull Request` button.
-    1. Click `Open Pull Request`.
-    1. You'll be redirected to your repository on `github.com` to open the pull request.
+    1. You will be redirected to the dashboards page and see a banner indicating this is a preview and not yet live in Grafana. 
+    1. The banner will offer an `Open Pull Request` button, click on it.
+    1. A new tab will be opened for you to open a pull request in Github.
 1. In GitHub:
     1. Open the pull request.
     1. Wait a few seconds for the Grafana integration to comment on the pull request with before-and-after previews of your dashboard changes.
+    1. Enjoy the view of the side-to-side comparison.
     1. Merge the pull request.
 1. In Grafana:
-    1. Go to your dashboard (or refresh) to see the changes applied automatically.
+    1. Go to your dashboard (or refresh) to see the changes were applied automatically.
 
 ## Step 3: Edit a Dashboard from Github
 
