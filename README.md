@@ -47,18 +47,19 @@ Here's how to migrate your existing dashboards to GitHub and enable bi-direction
     1. Open your repository on `github.com` to see what's inside.
 1. In Grafana, go to `Administration/provisioning` to set up your first repository:
     1. Click in `Configure Git Sync`.
-    1. Paste your PAT token and enter your repository details. Click `Next`.
+    1. Paste your PAT token and enter your repository details. Click `Choose what to synchronize`.
     1. Grafana will show you how many dashboards are in your instance and ask if you want to migrate them to GitHub.
-    1. Select the migration option to migrate all dashboards and start the process.
+    1. Select the migration option to sync all dashboards `Sync all resources from external storage` and start the process by click in `Synchronize with external storage` and then `Begin synchronization`.
     1. Wait for the migration to complete. Grafana will tell you how many dashboards were successfully migrated.
-    1. Enable the `TODO` option to allow dashboard preview screenshots on pull requests.
+    1. Click on `Choose additional settings`.
+    1. Enable the `Enable dashboards previews in pull requests` option to have dashboard preview screenshots on pull requests.
     1. Click `Finish`.
 1. In GitHub:
     1. Refresh your repository to see a new `./grafana` folder with your dashboards.
     1. Look at the folder structure and files.
     1. Open a dashboard file to peeak at its contents.
 1. In Grafana:
-    1. Open the GitHub connection by clicking `TODO`.
+    1. Open the GitHub connection by clicking `View`.
     1. Check out the repository status page (e.g., dashboard count, recent jobs, resources tab, and files tab).
 
 That's it! Your Grafana instance is now connected to GitHub with Git Sync, keeping everything in sync.
