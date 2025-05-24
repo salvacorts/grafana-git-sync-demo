@@ -51,6 +51,8 @@ This demo will walk you through setting up Git Sync and using it to manage your 
 
 ## Step 1: Migrate Dashboards to GitHub
 
+![](./assets/gifs/git-sync-demo-step-1-connect.gif)
+
 Here's how to migrate your existing dashboards to GitHub and enable bi-directional sync between Grafana and GitHub:
 
 - In Grafana:
@@ -122,6 +124,8 @@ You can edit dashboards in Grafana and submit changes as pull requests in GitHub
 ## Step 4: Edit a Dashboard Using `grafanactl`
 
 > `grafanactl` is a command-line tool that helps you manage Grafana resources like dashboards, folders, and datasources. The tool integrates with Git Sync, allowing you to manage your dashboards through both the Grafana UI and command line, giving you flexibility in how you work with your dashboards.
+
+![](./assets/gifs/git-sync-demo-step-4-grafanactl.gif)
 
 Here is how you can edit dashboards using `grafanactl` and see the changes reflected in both GitHub and Grafana:
 
