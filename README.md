@@ -55,7 +55,7 @@ Here's how to migrate your existing dashboards to GitHub and enable bi-direction
     1. Enable the `Enable dashboards previews in pull requests` option to have dashboard preview screenshots on pull requests.
     1. Click `Finish`.
 1. In GitHub:
-    1. Refresh your repository to see a new `./grafana` folder with your dashboards.
+    1. Refresh your repository to see a new `grafana` directory containing your migrated dashboards.
     1. Look at the folder structure and files.
     1. Open a dashboard file to peeak at its contents.
 1. In Grafana:
