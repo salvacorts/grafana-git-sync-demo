@@ -22,10 +22,10 @@ This demo is designed for:
 ## Video Recordings
 
 For a visual (but muted :P) walkthrough, you can watch the following recordings:
-- [Step 1: Establishing GitHub Connection](https://raw.githubusercontent.com/grafana/grafana-git-sync-demo/main/assets/videos/git-sync-demo-step-1-connect.mp4).
-- [Step 2: Use Pull Request to Edit your Dashboards](https://raw.githubusercontent.com/grafana/grafana-git-sync-demo/main/assets/videos/git-sync-demo-step-2-pull-request.mp4).
-- [Step 3: Edit Dashboard from Github](https://raw.githubusercontent.com/grafana/grafana-git-sync-demo/main/assets/videos/git-sync-demo-step-3-github-com.mp4).
-- [Step 4: Edit Dashboard with grafanactl](https://raw.githubusercontent.com/grafana/grafana-git-sync-demo/main/assets/videos/git-sync-demo-step-4-grafanactl.mp4).
+- [Step 1: Establishing GitHub Connection](https://github.com/MissingRoberto/grafana-git-sync-demo/raw/refs/heads/main/assets/videos/git-sync-demo-step-1-connect.mp4).
+- [Step 2: Use Pull Request to Edit your Dashboards](https://github.com/MissingRoberto/grafana-git-sync-demo/raw/refs/heads/main/assets/videos/git-sync-demo-step-2-pull-request.mp4).
+- [Step 3: Edit Dashboard from Github](https://github.com/MissingRoberto/grafana-git-sync-demo/raw/refs/heads/main/assets/videos/git-sync-demo-step-3-github-com.mp4).
+- [Step 4: Edit Dashboard with grafanactl](https://github.com/MissingRoberto/grafana-git-sync-demo/raw/refs/heads/main/assets/videos/git-sync-demo-step-4-grafanactl.mp4).
 
 ## Requirements
 
