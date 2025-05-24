@@ -1,5 +1,8 @@
 # grafana-git-sync-demo
 
+> [!NOTE]
+> This documentation reflects the state of Git Sync as of May 2025. As this feature is actively evolving, some instructions may become outdated quickly. Please refer to the [official Grafana documentation](https://grafana.com/docs/grafana/latest/observability-as-code/provision-resources/git-sync-setup/) for the most up-to-date information.
+
 > [!WARNING]
 > Git Sync is currently in an experimental phase and may have limitations or breaking changes. While it represents Grafana's first step toward comprehensive Observability as Code, we don't recommend using it in production or critical environments.
 
