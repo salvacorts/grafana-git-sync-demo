@@ -45,16 +45,18 @@ Here's how to migrate your existing dashboards to GitHub and enable bi-direction
     1. Go to `Dashboards` and check out your existing dashboards and folders.
 1. In GitHub:
     1. Open your repository on `github.com` to see what's inside.
-1. In Grafana, go to `TODO/provisioning` to set up your first repository:
-    1. Paste your PAT token and enter your repository details. Click "Next."
+1. In Grafana, go to `Administration/provisioning` to set up your first repository:
+    1. Click in `Configure Git Sync`.
+    1. Paste your PAT token and enter your repository details. Click `Next`.
     1. Grafana will show you how many dashboards are in your instance and ask if you want to migrate them to GitHub.
-    1. Select the migration option and start the process.
-    1. Wait for the migration to complete. Grafana will tell you how many dashboards were migrated.
+    1. Select the migration option to migrate all dashboards and start the process.
+    1. Wait for the migration to complete. Grafana will tell you how many dashboards were successfully migrated.
     1. Enable the `TODO` option to allow dashboard preview screenshots on pull requests.
-    1. Click "Finish."
+    1. Click `Finish`.
 1. In GitHub:
-    1. Refresh your repository to see a new `/grafana` folder with your dashboards.
-    1. Open a dashboard file to quickly review its contents.
+    1. Refresh your repository to see a new `./grafana` folder with your dashboards.
+    1. Look at the folder structure and files.
+    1. Open a dashboard file to peeak at its contents.
 1. In Grafana:
     1. Open the GitHub connection by clicking `TODO`.
     1. Check out the repository status page (e.g., dashboard count, recent jobs, resources tab, and files tab).
@@ -101,6 +103,23 @@ Here is how you can edit dashboards using `grafanactl` and see the changes refle
     1. First, explore the available commands:
         ```bash
         grafanactl -h
+        Usage:
+        grafanactl [command]
+
+        Available Commands:
+        completion  Generate the autocompletion script for the specified shell
+        config      View or manipulate configuration settings
+        help        Help about any command
+        resources   Manipulate Grafana resources
+
+        Flags:
+        -h, --help            help for grafanactl
+            --no-color        Disable color output
+        -v, --verbose count   Verbose mode. Multiple -v options increase the verbosity (maximum: 3).
+            --version         version for grafanactl
+
+        Use "grafanactl [command] --help" for more information about a command.
+
         ```
         This will show you all available options and commands for the CLI tool.
 
