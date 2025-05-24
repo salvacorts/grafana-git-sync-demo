@@ -109,6 +109,8 @@ You can edit dashboards in Grafana and submit changes as pull requests in GitHub
 
 ## Step 3: Edit a Dashboard from Github
 
+![](./assets/gifs/git-sync-demo-step-3-github-com.gif)
+
 - In Github, 
   - Go to the dashboard you previously modified (or another one). 
   - Edit the title of a panel (e.g. "Modified From Github"). 
