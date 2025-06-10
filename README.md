@@ -37,19 +37,23 @@ For a visual (but muted :P) walkthrough, you can watch the following recordings:
 - Some dashboards and folders already created in your Grafana instance.
 - [grafanactl](https://grafana.github.io/grafanactl/installation/) installed.
 
-**Note**: You can also start a demo environment using [Docker](https://www.docker.com/) and [Ngrok](https://ngrok.com/) if you don't have already an environment or want to try it fast. For that follow these steps:
+**Note**: If you don't have an existing environment or want to quickly try out the demo, you can set up a demo environment using [Docker](https://www.docker.com/) and [Ngrok](https://ngrok.com/). Follow these steps:
 
-1. Set up the necessary environment variables for NGROK. You need to define the following variables in a `.env` file or export them in your terminal session:
+1. Configure the necessary environment variables for NGROK. Define the following variables in a `.env` file or export them in your terminal session:
 
    ```bash
    export NGROK_AUTH_TOKEN=<your-ngrok-auth-token>
    export NGROK_SUBDOMAIN=<your-desired-subdomain>
    ```
 
-2. Run the Docker Compose setup by executing the following command in the directory containing the `docker-compose.yaml` file:
+2. Execute the Docker Compose setup by running the following command in the directory containing the `docker-compose.yaml` file:
 
    ```bash
    docker-compose up
+   ```
+
+   ```
+
    ```
 
 ## Intro
