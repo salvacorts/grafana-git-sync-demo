@@ -8,11 +8,10 @@ Hey there! This is a fun demo showing how to use [Grafana Git Sync](https://graf
 > [!WARNING]
 > Git Sync is currently in an experimental phase and may have limitations or breaking changes. While it represents Grafana's first step toward comprehensive Observability as Code, we don't recommend using it in production or critical environments.
 
-
-
 ## Target Audience
 
 This demo is designed for:
+
 - **DevOps Engineers** looking to implement Observability as Code practices.
 - **SREs** wanting to version control their monitoring dashboards.
 - **Grafana Users** interested in automating dashboard management.
@@ -22,6 +21,7 @@ This demo is designed for:
 ## Video Recordings
 
 For a visual (but muted :P) walkthrough, you can watch the following recordings:
+
 - [Step 1: Establishing GitHub Connection](https://github.com/MissingRoberto/grafana-git-sync-demo/raw/refs/heads/main/assets/videos/git-sync-demo-step-1-connect.mp4).
 - [Step 2: Use Pull Request to Edit your Dashboards](https://github.com/MissingRoberto/grafana-git-sync-demo/raw/refs/heads/main/assets/videos/git-sync-demo-step-2-pull-request.mp4).
 - [Step 3: Edit Dashboard from Github](https://github.com/MissingRoberto/grafana-git-sync-demo/raw/refs/heads/main/assets/videos/git-sync-demo-step-3-github-com.mp4).
@@ -36,6 +36,23 @@ For a visual (but muted :P) walkthrough, you can watch the following recordings:
 - A PAT (Personal Access Token) with the right permissions for your repository, including webhook events and pull requests. See [Create a Github Access Token](https://grafana.com/docs/grafana/latest/observability-as-code/provision-resources/git-sync-setup/#create-a-github-access-token).
 - Some dashboards and folders already created in your Grafana instance.
 - [grafanactl](https://grafana.github.io/grafanactl/installation/) installed.
+
+## Start with docker
+
+You can also start a demo using Docker and Ngrok, follow these steps:
+
+1. Set up the necessary environment variables for NGROK. You need to define the following variables in a `.env` file or export them in your terminal session:
+
+   ```bash
+   export NGROK_AUTH_TOKEN=<your-ngrok-auth-token>
+   export NGROK_SUBDOMAIN=<your-desired-subdomain>
+   ```
+
+2. Run the Docker Compose setup by executing the following command in the directory containing the `docker-compose.yaml` file:
+
+   ```bash
+   docker-compose up
+   ```
 
 ## Intro
 
@@ -85,7 +102,7 @@ That's it! Your Grafana instance is now connected to GitHub with Git Sync, keepi
 You can edit dashboards in Grafana and submit changes as pull requests in GitHub before they go live:
 
 - In Grafana:
-  - Go to `Dashboards`. 
+  - Go to `Dashboards`.
   - Open a dashboard.
   - You will see a purple `<->` badge indicating it's now managed by Git Sync.
   - Make some changes and click on `Save`.
@@ -93,7 +110,7 @@ You can edit dashboards in Grafana and submit changes as pull requests in GitHub
   - Write a commit message.
   - Select `Push to new branch` to create a branch for your changes.
   - Click `Save`.
-  - You will be redirected to the dashboards page and see a banner indicating this is a preview and not yet live in Grafana. 
+  - You will be redirected to the dashboards page and see a banner indicating this is a preview and not yet live in Grafana.
   - The banner will offer an `Open Pull Request` button, click on it.
   - A new tab will be opened for you to open a pull request in Github.
 - In GitHub:
@@ -113,11 +130,11 @@ You can edit dashboards in Grafana and submit changes as pull requests in GitHub
 
 ![](./assets/gifs/git-sync-demo-step-3-github-com.gif)
 
-- In Github, 
-  - Go to the dashboard you previously modified (or another one). 
-  - Edit the title of a panel (e.g. "Modified From Github"). 
-  - Save and push to the branch. 
-- In Grafana, 
+- In Github,
+  - Go to the dashboard you previously modified (or another one).
+  - Edit the title of a panel (e.g. "Modified From Github").
+  - Save and push to the branch.
+- In Grafana,
   - Go to that dashboard (or refresh).
   - See that changes are now reflected.
 
@@ -130,7 +147,9 @@ You can edit dashboards in Grafana and submit changes as pull requests in GitHub
 Here is how you can edit dashboards using `grafanactl` and see the changes reflected in both GitHub and Grafana:
 
 - In your terminal:
+
   - First, explore the available commands:
+
     ```console
     grafanactl -h
     Usage:
@@ -150,16 +169,20 @@ Here is how you can edit dashboards using `grafanactl` and see the changes refle
 
     Use "grafanactl [command] --help" for more information about a command.
     ```
+
     This will show you all available options and commands for the CLI tool.
 
   - Pull the latest resources from Grafana:
+
     ```console
     grafanactl resources pull
     ✔ 6 resources pulled
     ```
+
     This command synchronizes your local environment with your Grafana instance, downloading all dashboards and other resources.
 
   - List all available dashboards and folders:
+
     ```console
     $ grafanactl resources get folders
     KIND     NAME                                       NAMESPACE
@@ -172,17 +195,21 @@ Here is how you can edit dashboards using `grafanactl` and see the changes refle
     Dashboard   admfz74   default
     Dashboard   adn5mxb   default
     ```
+
     This will display a list of all dashboards with their IDs, which you'll need for editing.
 
   - Find out the dashboard ID by looking at the file or browser URL.
   - Edit a specific dashboard by peeking at the id:
+
     ```console
     grafanactl resource edit dashboard <ID>
     # You will be able to edit the dashboard using your default terminal editor
     ```
+
     Replace `<ID>` with the actual dashboard ID from the previous step. This will open your default editor where you can make changes to the dashboard JSON.
 
 - In GitHub:
+
   - Navigate to your repository.
   - Check the commit history to see your dashboard changes.
   - Review the changes in the dashboard JSON file.
@@ -196,4 +223,3 @@ Here is how you can edit dashboards using `grafanactl` and see the changes refle
 🎉 Excellent work! You've now mastered Git Sync for Grafana dashboards and can confidently manage your dashboards through multiple interfaces - the Grafana UI, GitHub, and the command line. This setup enables collaborative dashboard development with proper version control and review processes. 🎉
 
 Thank you for following along with this guide. You're now part of an elite group who keep their dashboards version-controlled and collaborative. Happy dashboarding! 🚀
-
