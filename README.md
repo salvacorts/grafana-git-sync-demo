@@ -39,21 +39,17 @@ For a visual (but muted :P) walkthrough, you can watch the following recordings:
 
 **Note**: If you don't have an existing environment or want to quickly try out the demo, you can set up a demo environment using [Docker](https://www.docker.com/) and [Ngrok](https://ngrok.com/). Follow these steps:
 
-1. Configure the necessary environment variables for NGROK. Define the following variables in a `.env` file or export them in your terminal session:
+1. Configure the necessary environment variables for NGROK. You can export them in your terminal session:
 
    ```bash
    export NGROK_AUTH_TOKEN=<your-ngrok-auth-token>
    export NGROK_SUBDOMAIN=<your-desired-subdomain>
    ```
 
-2. Execute the Docker Compose setup by running the following command in the directory containing the `docker-compose.yaml` file:
+2. Execute the following command to start the demo environment:
 
    ```bash
    docker-compose up
-   ```
-
-   ```
-
    ```
 
 ## Intro
