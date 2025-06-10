@@ -37,9 +37,7 @@ For a visual (but muted :P) walkthrough, you can watch the following recordings:
 - Some dashboards and folders already created in your Grafana instance.
 - [grafanactl](https://grafana.github.io/grafanactl/installation/) installed.
 
-## Start with docker
-
-You can also start a demo using Docker and Ngrok, follow these steps:
+**Note**: You can also start a demo environment using [Docker](https://www.docker.com/) and [Ngrok](https://ngrok.com/) if you don't have already an environment or want to try it fast. For that follow these steps:
 
 1. Set up the necessary environment variables for NGROK. You need to define the following variables in a `.env` file or export them in your terminal session:
 
