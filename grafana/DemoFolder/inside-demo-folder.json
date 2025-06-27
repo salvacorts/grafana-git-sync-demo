@@ -24,7 +24,6 @@
     "editable": true,
     "fiscalYearStartMonth": 0,
     "graphTooltip": 0,
-    "id": null,
     "links": [],
     "panels": [
       {
@@ -107,7 +106,7 @@
             "sort": "none"
           }
         },
-        "pluginVersion": "12.1.0-pre",
+        "pluginVersion": "12.1.0-250218",
         "targets": [
           {
             "datasource": {
@@ -117,7 +116,7 @@
             "refId": "A"
           }
         ],
-        "title": "Inside Demo Folder",
+        "title": "Inside Demo Folder CHANGE",
         "type": "timeseries"
       }
     ],
