@@ -21,6 +21,7 @@
         }
       ]
     },
+    "description": "This dashboard provides comprehensive monitoring and analytics for Inside Demo Folder. It includes real-time metrics, performance indicators, and actionable insights to help you monitor system health, track key performance metrics, and identify potential issues before they impact your operations.",
     "editable": true,
     "fiscalYearStartMonth": 0,
     "graphTooltip": 0,
@@ -106,7 +107,7 @@
             "sort": "none"
           }
         },
-        "pluginVersion": "12.1.0-250218",
+        "pluginVersion": "12.1.0-pre",
         "targets": [
           {
             "datasource": {
@@ -116,7 +117,7 @@
             "refId": "A"
           }
         ],
-        "title": "Inside Demo Folder CHANGE FROM GIT",
+        "title": "Inside Demo Folder CHANGE",
         "type": "timeseries"
       }
     ],
@@ -132,6 +133,6 @@
     },
     "timepicker": {},
     "timezone": "browser",
-    "title": "Inside Demo Folder"
+    "title": "Inside Demo Folder - Enhanced Analytics"
   }
 }
