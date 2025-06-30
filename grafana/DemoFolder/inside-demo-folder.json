@@ -32,6 +32,7 @@
           "type": "datasource",
           "uid": "grafana"
         },
+        "description": "API reqs per sec",
         "fieldConfig": {
           "defaults": {
             "color": {
@@ -117,7 +118,7 @@
             "refId": "A"
           }
         ],
-        "title": "Inside Demo Folder CHANGE",
+        "title": "QPS",
         "type": "timeseries"
       }
     ],
@@ -128,7 +129,7 @@
       "list": []
     },
     "time": {
-      "from": "now-3h",
+      "from": "now-2h",
       "to": "now"
     },
     "timepicker": {},
