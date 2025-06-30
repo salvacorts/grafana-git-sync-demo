@@ -118,7 +118,7 @@
             "refId": "A"
           }
         ],
-        "title": "QPS API",
+        "title": "QPS",
         "type": "timeseries"
       }
     ],
