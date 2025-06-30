@@ -21,7 +21,7 @@
         }
       ]
     },
-    "description": "This dashboard provides comprehensive monitoring and analytics for Inside Demo Folder - Enhanced Analytics - Enhanced Analytics - Enhanced Analytics - Enhanced Analytics. It includes real-time metrics, performance indicators, and actionable insights to help you monitor system health, track key performance metrics, and identify potential issues before they impact your operations.",
+    "description": "This dashboard provides comprehensive monitoring and analytics for Inside Demo Folder - Enhanced Analytics. It includes real-time metrics, performance indicators, and actionable insights to help you monitor system health, track key performance metrics, and identify potential issues before they impact your operations.",
     "editable": true,
     "fiscalYearStartMonth": 0,
     "graphTooltip": 0,
@@ -128,11 +128,11 @@
       "list": []
     },
     "time": {
-      "from": "2025-05-23T21:39:24.367Z",
-      "to": "2025-05-24T09:39:24.367Z"
+      "from": "now-3h",
+      "to": "now"
     },
     "timepicker": {},
     "timezone": "browser",
-    "title": "Inside Demo Folder - Enhanced Analytics - Enhanced Analytics - Enhanced Analytics - Enhanced Analytics - Enhanced Analytics"
+    "title": "Inside Demo Folder - Enhanced Analytics"
   }
 }
