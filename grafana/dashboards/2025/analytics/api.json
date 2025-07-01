@@ -117,7 +117,7 @@
             "refId": "A"
           }
         ],
-        "title": "API QPS",
+        "title": "API QPS Change",
         "type": "timeseries"
       },
       {
@@ -221,7 +221,7 @@
       "list": []
     },
     "time": {
-      "from": "now-1h",
+      "from": "now-3h",
       "to": "now"
     },
     "timepicker": {},
